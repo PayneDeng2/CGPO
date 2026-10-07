@@ -1,0 +1,3 @@
+# Full CGPO: D uses pi_0 and U uses consensus.
+method:
+  reference_assignment: label_conditional

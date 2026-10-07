@@ -1,0 +1,28 @@
+models:
+  target_backbone: microsoft/Phi-3.5-mini-instruct
+  initial_policy: null  # Supply the SFT checkpoint through --model.
+  sources:
+    - Qwen/Qwen2.5-7B
+    - Qwen/Qwen2.5-7B-Instruct
+    - google/gemma-2-9b-it
+    - Qwen/Qwen2.5-Math-7B-Instruct
+
+consensus:
+  aggregation: calibrated_entropy
+  temperature: 0.8
+  weight_floor: 0.02
+  z_clip: 5.0
+  baseline_alignment: true
+
+method:
+  reference_assignment: label_conditional
+  # Defines the source-informed empirical distribution within each label.
+  source_allocation_weight_field: source_allocation_weight
+  beta: 0.08
+  desirable_weight: 1.2
+  undesirable_weight: 1.0
+  undesirable_warmup_start: 0
+  undesirable_warmup_steps: 100
+
+training:
+  learning_rate: 5.0e-7

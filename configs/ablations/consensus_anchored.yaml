@@ -1,0 +1,3 @@
+# Appendix B.5/C.1: use consensus for both labels.
+method:
+  reference_assignment: consensus_anchored

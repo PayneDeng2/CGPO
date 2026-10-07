@@ -1,0 +1,5 @@
+# Figure 3(a): retain calibrated consensus but do not apply delta_BS(x).
+consensus:
+  aggregation: calibrated_entropy
+  baseline_alignment: false
+

@@ -1,0 +1,5 @@
+# Figure 3(a): replace entropy-calibrated weights with a uniform mean.
+consensus:
+  aggregation: mean
+  baseline_alignment: true
+

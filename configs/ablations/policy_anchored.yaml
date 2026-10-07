@@ -1,0 +1,3 @@
+# Appendix B.5/C.1: use pi_0 for both labels.
+method:
+  reference_assignment: policy_anchored

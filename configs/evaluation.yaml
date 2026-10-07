@@ -1,0 +1,35 @@
+# Appendix A: benchmark protocol used for every evaluated model.
+benchmarks:
+  GSM8K:
+    setting: 8-shot CoT
+    metric: exact_match
+    inference: greedy
+  MATH:
+    setting: 0-shot CoT
+    metric: exact_match
+    inference: greedy
+  TheoremQA:
+    setting: 5-shot
+    metric: answer_match_accuracy
+    inference: greedy
+  BBH:
+    setting: 3-shot
+    metric: normalized_accuracy
+    inference: multiple_choice_log_likelihood
+  MMLU:
+    setting: 5-shot
+    metric: accuracy
+    inference: multiple_choice_log_likelihood
+  IFEval:
+    setting: 0-shot
+    metric: prompt_level_strict_accuracy
+    inference: greedy
+  MBPP:
+    setting: 3-shot
+    metric: pass_at_1
+    inference: greedy
+
+aggregation:
+  math: [GSM8K, MATH, TheoremQA]
+  reasoning: [BBH, MMLU]
+  overall: [GSM8K, MATH, TheoremQA, BBH, MMLU, IFEval, MBPP]

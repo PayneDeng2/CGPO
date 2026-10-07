@@ -1,0 +1,5 @@
+# Figure 3(a): activate both branches from the first update.
+method:
+  undesirable_warmup_start: 0
+  undesirable_warmup_steps: 0
+

@@ -1,0 +1,5 @@
+# Figure 3(a): source affects neither data allocation nor references.
+# Use this overlay with a separately constructed source-agnostic dataset.
+method:
+  reference_assignment: policy_anchored
+  source_allocation_weight_field: null

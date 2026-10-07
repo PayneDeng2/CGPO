@@ -1,0 +1,4 @@
+# Appendix C.2, 7B target-model setting.
+models:
+  target_backbone: microsoft/Phi-3-small-8k-instruct
+  initial_policy: null  # Supply the corresponding SFT checkpoint.
